@@ -1,7 +1,11 @@
-import React, { FC, PropsWithChildren } from 'react';
+'use client'
+import React, { FC, PropsWithChildren, useEffect } from 'react';
 import Link from 'next/link';
 
 const Menu:FC<PropsWithChildren> = ({children}) => {
+    useEffect(() => {
+        console.log('RootLayout update1')
+    }, []);
     return (
         <div>
             <Link href={'/'} prefetch={false}>Home</Link>
